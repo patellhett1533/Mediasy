@@ -1,0 +1,146 @@
+.navbar-section {
+    background-color: var(--back-color);
+    width: 15rem;
+    height: 100vh;
+    position: fixed;
+    z-index: 1000000000;
+}
+
+/* website logo */
+.website-logo {
+    padding: 3rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.website-logo h3 {
+    font-family: var(--body-font-alt);
+    color: var(--button-color);
+}
+
+/* menubar section */
+.section {
+    padding: 0 2rem;
+}
+
+.menubar ul {
+    margin-top: var(--mb-1-5);
+}
+
+.menu-list .active {
+    color: var(--text-color);
+}
+
+.menu-list li a {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    margin-bottom: var(--mb-1-5);
+    color: var(--text-color-alt);
+}
+
+.menu-list li a p{
+    font-size: var(--normal-font);
+}
+
+.menu-list li i {
+    cursor: pointer;
+    font-size: var(--h3-font);
+    margin-right: var(--mb-1);
+}
+
+/* account detail css in navbar */
+.user-info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: var(--mb-1);
+    line-height: 1.2rem;
+}
+
+.user-info img {
+    margin-right: var(--mb-0-75);
+    width: 3rem;
+    height: 3rem;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.username-info p {
+    font-size: var(--normal-font);
+    font-weight: var(--font-medium);
+    color: var(--text-color);
+}
+
+.user-info span {
+    font-size: var(--smaller-font);
+    color: var(--text-color-alt);
+}
+
+/* ===== Break Point ===== */
+@media screen and (max-width: 992px) {
+    
+}
+
+@media screen and (max-width: 768px) {
+    .navbar-section{
+        width: 8rem;
+    }
+    .menu-list li p{
+        display: none;
+    }
+    .menu-list li a {
+        justify-content: center;
+    }
+    .username-info{
+        display: none;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .navbar-section{
+        width: 100%;
+        height: auto;
+        position: fixed;
+        bottom: 0;
+    }
+    .website-logo{
+        display: none;
+    }
+    .section{
+        padding: 1.2rem 1.5rem;
+    }
+    .menubar b{
+        display: none;
+    }
+    .menu-list li{
+        display: flex;
+    }
+    .menubar ul {
+        margin-top: 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .menu-list li{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .menu-list li a {
+        margin-bottom: 0;
+    }
+    .menu-list li i {
+        cursor: pointer;
+        font-size: var(--h2-font);
+        margin-right: 0;
+    }
+    .account{
+        display: none;
+    }
+}
+
+@media screen and (max-width: 390px) {
+
+}

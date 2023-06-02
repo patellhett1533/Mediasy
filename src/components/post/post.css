@@ -1,0 +1,181 @@
+.addPost-section{
+    margin: 0 3rem 0 18rem;
+    width: 39rem;
+    background-color: var(--back-color);
+    padding: var(--mb-1-5);
+    color: var(--text-color);
+}
+
+.addPost-section h3{
+    color: var(--text-color-alt);
+    text-align: center;
+    margin-bottom: var(--mb-2);
+}
+
+.select-photo{
+    margin: 0 auto;
+    border: 0.15rem dashed var(--border-color);
+    width: 20rem;
+    height: 25rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 5rem 0;
+    cursor: pointer;
+}
+
+.selected-img{
+    width: 100%;
+    aspect-ratio: 4/5;
+    object-fit: cover;
+}
+
+.no-select{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.no-select i{
+    font-size: var(--big-font);
+    color: var(--button-color);
+}
+
+.no-select p{
+    color: var(--button-color);
+}
+
+
+
+/* save photo button css */
+.save-photo{
+    margin: var(--mb-1-5) var(--mb-2);
+    display: flex;
+    justify-content: flex-end;
+}
+
+.save-photo button{
+    padding: var(--mb-0-75) var(--mb-1-5);
+    background-color: var(--button-color);
+    color: #f8f8f8;
+    border-radius: 0.3rem;
+}
+
+/* photo preview css */
+.preview-photos{
+    margin: var(--mb-1-5) var(--mb-2);
+}
+
+.selected-photo{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--back-color-alt);
+    padding: var(--mb-1) var(--mb-1);
+    border-radius: 0.2rem;
+    box-shadow: 0 2px 3px rgba(0,0,0,0.2);
+}
+
+.selected-photo:not(:last-child){
+    margin-bottom: var(--mb-1);
+}
+
+.selected-photo div{
+    display: flex;
+    align-items: center;
+}
+
+.selected-photo i{
+    color: var(--button-color);
+    font-size: var(--h2-font);
+    margin-right: var(--mb-1);
+}
+
+.selected-photo p{
+    cursor: pointer;
+}
+
+.deleteImg{
+    display: flex;
+    justify-content: flex-end;
+    cursor: pointer;
+    margin-right: 0;
+}
+
+/* post caption section css */
+.post-caption{
+    margin: var(--mb-3) var(--mb-2) var(--mb-1-5) var(--mb-2);
+    display: flex;
+    flex-direction: column;
+}
+
+.post-caption input{
+    background-color: transparent;
+    color: var(--text-color);
+    border-radius: 0.2rem;
+    padding: 0.5rem 0.7rem;
+    outline: none;
+    border: 0.1rem solid var(--border-color);
+}
+
+
+
+/* next button css */
+.upload-photos{
+    margin: var(--mb-1-5) var(--mb-2);
+}
+
+.upload-photos button{
+    background-color: var(--button-color);
+    color: #f8f8f8;
+    padding: var(--mb-0-75) var(--mb-1-5);
+    border-radius: 0.3rem;
+    width: 100%;
+}
+
+/* ===== Break Point ===== */
+@media screen and (max-width: 1380px) {
+    .addPost-section {
+        max-width: calc(100% - 46rem);
+    }
+}
+
+@media screen and (max-width: 1176px) {
+    .addPost-section {
+        max-width: calc(100% - 43rem);
+    }
+}
+
+@media screen and (max-width: 1090px){
+    .addPost-section {
+        max-width: calc(100% - 38rem);
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .addPost-section {
+        margin: 0 1rem 0 16rem;
+        width: fit-content;
+        max-width: calc(100% - 28rem);
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .addPost-section {
+        margin: 0 3rem 0 8rem;
+        width: fit-content;
+        max-width: 80%;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .addPost-section {
+        margin: 0 0 0 0;
+        width: fit-content;
+        max-width: 100%;
+    }
+}
+
+@media screen and (max-width: 390px) {}

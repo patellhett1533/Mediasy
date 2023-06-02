@@ -1,0 +1,100 @@
+.user-list-section {
+    margin: 0 3rem 0 18rem;
+    width: 40rem;
+    min-height: 100vh;
+    background-color: var(--back-color);
+    color: var(--text-color);
+    padding: var(--mb-1) var(--mb-1-5);
+}
+
+.user-list-box{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: var(--mb-1);
+}
+
+.user-list{
+    position: relative;
+}
+
+.user-list-info{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.user-list-info a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.user-list-info a img{
+    width: 4.5rem;
+    height: 4.5rem;
+    margin-right: var(--mb-1);
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.empty-list{
+    margin-top: var(--mb-2);
+    width: 100%;
+    text-align: center;
+}
+
+.user-follow-btn{
+    min-width: 6.5rem;
+}
+
+/* ===== Break Point ===== */
+@media screen and (max-width: 1380px) {
+    .user-list-section {
+        max-width: calc(100% - 46rem);
+    }
+}
+
+@media screen and (max-width: 1176px) {
+    .user-list-section {
+        max-width: calc(100% - 43rem);
+    }
+}
+
+@media screen and (max-width: 1090px){
+    .user-list-section {
+        max-width: calc(100% - 38rem);
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .user-list-section{
+        margin: 0 1rem 0 16rem;
+        max-width: calc(100% - 28rem);
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .user-list-section {
+        margin: 0 3rem 0 8rem;
+        max-width: 80%;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .user-list-section {
+        margin: 0 0 0 0;
+        max-width: 100%;
+    }
+    .user-list-info a img{
+        width: 4rem;
+        height: 4rem;
+        margin-right: var(--mb-0-75);
+    }
+}
+
+@media screen and (max-width: 300px) {
+    .user-list-username{
+        display: none;
+    }
+}

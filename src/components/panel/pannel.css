@@ -1,0 +1,235 @@
+.sidepanel-section {
+    background-color: var(--back-color);
+    width: 25rem;
+    position: fixed;
+    right: 0;
+    top: 0;
+    height: 100vh;
+    overflow-y: scroll;
+}
+
+.sidepanel-section::-webkit-scrollbar {
+    width: 0;
+}
+
+.account-option {
+    padding: var(--mb-3) var(--mb-1-5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.search-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: var(--mb-1);
+    border: 0.1rem solid var(--text-color-alt);
+    padding: 0.4rem 0.7rem;
+    border-radius: 1.3rem;
+}
+
+.search-section i {
+    color: var(--text-color-alt);
+    margin-right: var(--mb-0-5);
+}
+
+.search-section input {
+    width: 100%;
+    border: none;
+    outline: none;
+    font-size: var(--small-font);
+    background-color: transparent;
+    color: var(--text-color);
+}
+
+.search-section input::placeholder {
+    color: var(--text-color-alt);
+}
+
+/* search bar result */
+.search-result {
+    position: absolute;
+    top: 65%;
+    left: 6%;
+    background-color: var(--back-color);
+    padding: 0 8rem var(--mb-1) var(--mb-1);
+    border-radius: 0.3rem;
+    box-shadow:
+        0px 0.2px 2.2px rgba(0, 0, 0, 0.022),
+        0px 0.4px 5.3px rgba(0, 0, 0, 0.032),
+        0px 0.8px 10px rgba(0, 0, 0, 0.04),
+        0px 1.3px 17.9px rgba(0, 0, 0, 0.048),
+        0px 2.5px 33.4px rgba(0, 0, 0, 0.058),
+        0px 6px 80px rgba(0, 0, 0, 0.08);
+}
+
+.not-result{
+    display: none;
+}
+
+.notification-section {
+    border: 0.1rem solid var(--text-color-alt);
+    border-radius: 50%;
+    padding: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.notification-section i {
+    color: var(--text-color-alt);
+}
+
+.active-notification {
+    width: 0.5rem;
+    height: 0.5rem;
+    position: absolute;
+    border: 0.15rem solid var(--back-color);
+    border-radius: 50%;
+    background-color: #0d8d31;
+    right: 20%;
+    top: 15%;
+    padding: 0.2rem;
+}
+
+/* people-suggestion area css */
+.people-suggest {
+    margin: 0 var(--mb-1-5) 0 var(--mb-1-5);
+    padding-bottom: var(--mb-1-5);
+    border-bottom: 0.1rem solid var(--border-color);
+}
+
+.suggest-title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.suggest-title p {
+    font-size: var(--small-font);
+    font-weight: var(--medium-font);
+}
+
+.suggest-title span {
+    font-size: var(--small-font);
+    font-weight: var(--medium-font);
+}
+
+.suggest-box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: var(--mb-1);
+}
+
+.suggest-user {
+    display: flex;
+    align-items: center;
+}
+
+.suggest-user a{
+    cursor: pointer;
+}
+
+.suggest-user a img {
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    margin-right: var(--mb-0-75);
+}
+
+.suggest-username {
+    line-height: 1rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.suggest-username a {
+    font-size: var(--small-font);
+    cursor: pointer;
+}
+
+.suggest-username span {
+    font-size: var(--smaller-font);
+}
+
+.suggest-button button {
+    background-color: var(--button-color);
+    padding: var(--mb-0-25) var(--mb-0-5);
+    font-size: var(--small-font);
+    color: var(--back-color);
+    border-radius: 0.3rem;
+    width: 6rem;
+}
+
+.followed button {
+    border: 0.1rem solid var(--button-color);
+    background-color: transparent;
+    color: var(--text-color);
+}
+
+/* ===== Break Point ===== */
+@media screen and (max-width: 1380px) {
+    .sidepanel-section {
+        width: 30%;
+    }
+}
+
+@media screen and (max-width: 1176px) {
+    .sidepanel-section {
+        width: 25%;
+    }
+
+    .people-suggest {
+        margin: 0 var(--mb-1) 0 var(--mb-1);
+    }
+
+    .suggest-user img {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .sidepanel-section {
+        width: 20%;
+    }
+
+    .search-section {
+        margin-right: 0;
+    }
+
+    .notification-section {
+        display: none;
+    }
+
+    .people-suggest {
+        margin: 0 var(--mb-1) 0 var(--mb-1);
+    }
+
+    .suggest-user img {
+        display: block;
+    }
+
+    .suggest-username {
+        display: none;
+    }
+
+    .suggest-button button {
+        width: 4rem;
+        padding: var(--mb-0-25) 0;
+        font-size: var(--smaller-font);
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .sidepanel-section {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 576px) {}
+
+@media screen and (max-width: 390px) {}

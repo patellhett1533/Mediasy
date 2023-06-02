@@ -1,0 +1,134 @@
+.search-section-explor {
+    background-color: var(--back-color);
+    margin: 0 var(--mb-1);
+    margin-bottom: var(--mb-1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: var(--mb-1);
+    border: 0.1rem solid var(--text-color-alt);
+    padding: 0.4rem 0.7rem;
+    border-radius: 1.3rem;
+    position: relative;
+}
+
+.search-section-explor i {
+    color: var(--text-color-alt);
+    margin-right: var(--mb-0-5);
+}
+
+.search-section-explor .search-bar-explor {
+    width: 100%;
+    border: none;
+    outline: none;
+    font-size: var(--small-font);
+    background-color: transparent;
+    color: var(--text-color);
+}
+
+.search-section-explor input::placeholder {
+    color: var(--text-color-alt);
+}
+
+/* search bar result */
+.search-result-explor {
+    position: absolute;
+    width: 100%;
+    top: 2%;
+    left: 0;
+    z-index: 8000000000000000000000000000000000000;
+    background-color: var(--back-color);
+    padding: 0 var(--mb-1) var(--mb-1) var(--mb-2);
+    border-radius: 0.3rem;
+    box-shadow:
+        0px 0.2px 2.2px rgba(0, 0, 0, 0.022),
+        0px 0.4px 5.3px rgba(0, 0, 0, 0.032),
+        0px 0.8px 10px rgba(0, 0, 0, 0.04),
+        0px 1.3px 17.9px rgba(0, 0, 0, 0.048),
+        0px 2.5px 33.4px rgba(0, 0, 0, 0.058),
+        0px 6px 80px rgba(0, 0, 0, 0.08);
+}
+
+.not-result{
+    display: none;
+}
+
+.suggest-box-explor {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: var(--mb-1);
+}
+
+.suggest-user-explor {
+    display: flex;
+    align-items: center;
+}
+
+.suggest-user-explor a{
+    cursor: pointer;
+}
+
+.suggest-user-explor a img {
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    margin-right: var(--mb-0-75);
+}
+
+.suggest-username-explor {
+    line-height: 1rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.suggest-username-explor a {
+    font-size: var(--small-font);
+    cursor: pointer;
+}
+
+.suggest-username-explor span {
+    font-size: var(--smaller-font);
+}
+
+/* ===== Break Point ===== */
+@media screen and (max-width: 1380px) {
+    .explore-section {
+        width: calc(100% - 46rem);
+    }
+}
+
+@media screen and (max-width: 1176px) {
+    .explore-section {
+        width: calc(100% - 43rem);
+    }
+}
+
+@media screen and (max-width: 1090px){
+    .explore-section {
+        width: calc(100% - 38rem);
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .explore-section {
+        margin: 0 1rem 0 16rem;
+        width: calc(100% - 28rem);
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .explore-section {
+        margin: 0 3rem 0 8rem;
+        width: 80%;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .explore-section {
+        margin: 0 0 0 0;
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 390px) {}

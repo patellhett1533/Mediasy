@@ -1,0 +1,122 @@
+.comment-modal{
+    position: fixed;
+    z-index: 2000000000000000000000000;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.5s ease-in;
+}
+
+.comment-area-box{
+    background-color: var(--back-color);
+    width: 45rem;
+    height: 35rem;
+    border-radius: 0.5rem;
+    padding: var(--mb-2);
+    position: relative;
+}
+
+.comment-area-box .close-comment{
+    position: absolute;
+    top: 3%;
+    right: 3%;
+    font-size: var(--h2-font);
+    cursor: pointer;
+}
+
+.comment-post{
+    margin-top: var(--mb-1-5);
+    margin-bottom: var(--mb-1);
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.comment-post textarea{
+    color: var(--text-color);
+    width: 91%;
+    resize: none;
+    border: 0.1rem solid var(--border-color);
+    background-color: transparent;
+    padding: 0.3rem 0.5rem;
+    outline: none;
+    overflow-y: scroll;
+    border-top-left-radius: 0.3rem;
+    border-bottom-left-radius: 0.3rem;
+}
+
+.comment-post textarea::-webkit-scrollbar{
+    width: 0;
+}
+
+.comment-post button{
+    width: 8%;
+    padding: 0.5rem 0;
+    font-size: var(--h3-font);
+    background-color: var(--button-color);
+    color: #f8f8f8;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-top-right-radius: 0.3rem;
+    border-bottom-right-radius: 0.3rem;
+}
+
+.comment-other{
+    margin-top: var(--mb-1);
+}
+
+.none-modal{
+    display: none;
+}
+
+.comment-line{
+    display: flex;
+    align-items: center;
+}
+
+/* ===== Break Point ===== */
+@media screen and (max-width: 1380px) {
+    
+    
+}
+
+@media screen and (max-width: 1176px) {
+    
+}
+
+@media screen and (max-width: 1090px){
+    
+}
+
+@media screen and (max-width: 992px) {
+    .comment-area-box{
+        width: 35rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .comment-area-box{
+        width: 30rem;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .comment-area-box{
+        width: 100%;
+        height: 100vh;
+        border-radius: 0 0 0 0;
+    }
+}
+
+@media screen and (max-width: 390px) {}

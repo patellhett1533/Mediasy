@@ -1,0 +1,113 @@
+.notify-section{
+    margin: 0 3rem 0 18rem;
+    width: 39rem;
+    min-height: 100vh;
+    background-color: var(--back-color);
+    padding: var(--mb-1-5);
+    color: var(--text-color);
+}
+
+.notify-title{
+    font-size: var(--h3-font);
+}
+
+.notify-field{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin-top: var(--mb-1);
+}
+
+.notify-field a{
+    display: flex;
+    align-items: center;
+    margin-right: var(--mb-1);
+    width: 15%;
+}
+
+.notify-username{
+    display: flex;
+    align-items: center;
+    width: 65%;
+}
+
+.notify-username a{
+    margin-right: var(--mb-0-5);
+    width: auto;
+}
+
+.followBackBtn{
+    width: 20%;
+    padding: 0.3rem 0.5rem;
+    border-radius: 0.2rem;
+    background-color: var(--button-color);
+    color: #f8f8f8;
+}
+
+.followedBackBtn{
+    width: 20%;
+    padding: 0.3rem 0.5rem;
+    border-radius: 0.2rem;
+    background-color: transparent;
+    border: 0.1rem solid var(--button-color);
+}
+
+a .postCover{
+    width: 4rem;
+    height: 4rem;
+    padding: 0.1rem;
+    border: none;
+    border-radius: 0.3rem;
+    object-fit: cover;
+}
+
+.profilePic img{
+    width: 4rem;
+    height: 4rem;
+    padding: 0.1rem;
+    border: none;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+/* ===== Break Point ===== */
+@media screen and (max-width: 1380px) {
+    .notify-section {
+        max-width: calc(100% - 46rem);
+    }
+}
+
+@media screen and (max-width: 1176px) {
+    .notify-section {
+        max-width: calc(100% - 43rem);
+    }
+}
+
+@media screen and (max-width: 1090px){
+    .notify-section {
+        max-width: calc(100% - 38rem);
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .notify-section {
+        margin: 0 1rem 0 16rem;
+        max-width: calc(100% - 28rem);
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .notify-section {
+        margin: 0 3rem 0 8rem;
+        max-width: 80%;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .notify-section {
+        margin: 0 0 0 0;
+        max-width: 100%;
+    }
+}
+
+@media screen and (max-width: 390px) {}

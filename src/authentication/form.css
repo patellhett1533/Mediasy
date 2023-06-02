@@ -1,0 +1,209 @@
+.form-section {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    color: var(--text-color);
+}
+
+.form-area {
+    border-radius: 0.4rem;
+    background-color: var(--back-color);
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 70rem;
+    height: 35rem;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.signup-form,
+.login-form {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 6rem;
+}
+
+.signup-data,
+.login-data{
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.signup-data h2 ,
+.login-data h2{
+    font-family: var(--body-font-alt);
+    margin-bottom: var(--mb-1-5);
+}
+
+.password ,
+.cpassword{
+    position: relative;
+}
+
+.password i,
+.cpassword i{
+    cursor: pointer;
+    position: absolute;
+    top: 55%;
+    right: 0.5rem;
+    font-size: var(--h3-font);
+    color: var(--text-color-alt);
+}
+
+.input-field{
+    width: 100%;
+    margin-bottom: var(--mb-0-75);
+    display: flex;
+    flex-direction: column;
+}
+
+.input-field-group{
+    width: 100%;
+    margin-bottom: var(--mb-0-75);
+    display: flex;
+}
+
+.input-field-beta{
+    width: 49%;
+}
+
+.input-field-beta input{
+    color: var(--text-color);
+    padding: 0.3rem 0.5rem;
+    border: 0.1rem solid var(--border-color);
+    border-radius: 0.3rem;
+    outline: none;
+    background-color: transparent;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+.input-field-beta:not(:last-child){
+    margin-right: 2%;
+}
+
+.input-field label,
+.input-field-beta label,
+.input-button label{
+    font-size: var(--small-font);
+}
+
+.input-field input,
+.input-button input {
+    color: var(--text-color);
+    padding: 0.3rem 0.5rem;
+    border: 0.1rem solid var(--border-color);
+    border-radius: 0.3rem;
+    outline: none;
+    background-color: transparent;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+.forgot-password{
+    float: right;
+    margin-bottom: var(--mb-1-5);
+    font-size: var(--small-font);
+    cursor: pointer;
+}
+
+.signup-button ,
+.login-button{
+    width: 100%;
+    margin-bottom: var(--mb-0-75);
+    display: flex;
+    flex-direction: column;
+    background-color: var(--button-color);
+    border-radius: 0.3rem;
+    margin-top: var(--mb-1);
+}
+
+.error-button{
+    width: 100%;
+    margin-bottom: var(--mb-0-75);
+    display: flex;
+    flex-direction: column;
+    background-color: var(--err-color);
+    border-radius: 0.3rem;
+    margin-top: var(--mb-1);
+}
+
+.signup-button input ,
+.login-button input,
+.error-button input{
+    padding: 0.3rem 0.5rem;
+    border:none;
+    border-radius: 0.3rem;
+    outline: none;
+    background-color: transparent;
+    box-sizing: border-box;
+    color: #fefefe;
+    cursor: pointer;
+}
+
+.error-show{
+    display: none;
+}
+
+.already-signup ,
+.already-login{
+    text-align: center;
+}
+
+.already-signup p a ,
+.already-login p a{
+    cursor: pointer;
+    color: var(--button-color);
+}
+
+.signup-img ,
+.login-img{
+    width: 50%;
+    height: 100%;
+    background: url('../asstes/cover.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-top-right-radius: 0.3rem;
+    border-bottom-right-radius: 0.3rem;
+}
+
+/* ===== Break Point ===== */
+@media screen and (max-width: 1178px) {
+    .form-area{
+        width: calc(100% - 5rem);
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .signup-form,
+    .login-form{
+        padding: 0 4rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .form-area{
+        width: 100%;
+        height: 100vh;
+    }
+    .signup-form,
+    .login-form{
+        padding: 0 0;
+    }
+    .signup-img,
+    .login-img{
+        display: none;
+    }
+}
+
+@media screen and (max-width: 576px){
+    .signup-data h2 ,
+    .login-data h2{
+        text-align: center;
+    }
+}
+

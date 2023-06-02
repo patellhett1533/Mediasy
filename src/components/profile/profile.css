@@ -1,0 +1,392 @@
+.profile-section {
+    margin: 0 3rem 0 18rem;
+    width: 39rem;
+    min-height: 100vh;
+    background-color: var(--back-color);
+    padding: var(--mb-1-5);
+    position: relative;
+}
+
+/* menu or setting bar css */
+
+.setting-section i {
+    font-size: var(--h3-font);
+    color: var(--text-color);
+    position: absolute;
+    right: 5%;
+    cursor: pointer;
+}
+
+.setting-option {
+    list-style: none;
+    color: var(--text-color);
+    position: absolute;
+    right: 1rem;
+    top: 2.5rem;
+    background-color: var(--back-color);
+    box-shadow: 0 3px 3px rgba(0, 0, 0, 0.3);
+    border-radius: 0.4rem;
+    transition: ease-out 0.3s;
+    display: none;
+}
+
+.showmenu {
+    display: block;
+    z-index: var(--z-modal);
+}
+
+.setting-option li {
+    user-select: none;
+    cursor: pointer;
+    padding: var(--mb-0-75) var(--mb-1-5);
+}
+
+.setting-option li:hover {
+    color: var(--title-color);
+}
+
+/* follow profile button css */
+.follow-btn {
+    margin-top: var(--mb-1);
+    width: 100%;
+}
+
+.followBtn {
+    width: 100%;
+    padding: 0.3rem 0.4rem;
+    background-color: var(--button-color);
+    border-radius: 0.2rem;
+    color: #f8f8f8;
+    cursor: pointer;
+    border: 0.arem solid var(--button-color);
+}
+
+.followedBtn {
+    width: 100%;
+    padding: 0.3rem 0.4rem;
+    background-color: var(--back-color);
+    border-radius: 0.2rem;
+    border: 0.1rem solid var(--button-color);
+    cursor: pointer;
+    color: var(--text-color);
+}
+
+/* edit profile form css */
+.edit-profile-modal {
+    position: fixed;
+    z-index: 2000000000000000000000000;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.5s ease-in;
+}
+
+.close-modal {
+    display: none;
+}
+
+.edit-profile-form {
+    width: 40rem;
+    background-color: var(--back-color);
+    padding: var(--mb-3);
+    border-radius: 0.3rem;
+}
+
+.edit-photo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: var(--mb-1) 0;
+    margin-bottom: var(--mb-1);
+    position: relative;
+    cursor: pointer;
+}
+
+.edit-blur {
+    width: 10rem;
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 5rem;
+    border-radius: 0 0 170px 170px;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.edit-blur i {
+    font-size: var(--h1-font);
+    color: #f8f8f8;
+}
+
+.edit-photo img {
+    width: 10rem;
+    height: 10rem;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.edit-photo input {
+    display: none;
+}
+
+.edit-error {
+    width: 100%;
+}
+
+.edit-error input {
+    width: 100%;
+    margin-top: var(--mb-1);
+    padding: 0.3rem 0.5rem;
+    outline: none;
+    resize: none;
+    border-radius: 0.2rem;
+    border: none;
+    background-color: #ed4337;
+    color: #f8f8f8;
+    text-align: center;
+}
+
+.none-error {
+    display: none;
+}
+
+.input-modal-group {
+    display: flex;
+}
+
+.input-modal-group div:not(:last-child) {
+    margin-right: 2%;
+}
+
+.edit-info .input-modal input,
+.edit-info .input-modal-group input,
+.edit-info .input-modal textarea {
+    background-color: var(--back-color);
+    color: var(--text-color);
+    width: 100%;
+    margin-top: var(--mb-1);
+    padding: 0.3rem 0.5rem;
+    outline: none;
+    resize: none;
+    border-radius: 0.2rem;
+    border: 0.1rem solid var(--border-color);
+}
+
+.edit-submit {
+    display: flex;
+    gap: 1rem;
+}
+
+.save-btn {
+    background-color: var(--button-color) !important;
+    border: none !important;
+    color: #f8f8f8;
+    cursor: pointer;
+}
+
+.save-btn .closeBtn {
+    cursor: pointer;
+    background-color: var(--back-color);
+    color: var(--title-color);
+}
+
+
+
+/* profile photo and name css */
+.profile-info {
+    margin-top: var(--mb-1);
+    display: flex;
+    align-items: center;
+    line-height: 1.5rem;
+    position: relative;
+}
+
+.profile-info img {
+    width: 6rem;
+    object-fit: cover;
+    height: 6rem;
+    border-radius: 50%;
+    margin-right: var(--mb-1-5);
+}
+
+.profile-info .edit {
+    position: absolute;
+    width: 1.5rem;
+    height: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #f8f8f8;
+    border-radius: 50%;
+    border: 0.2rem solid var(--back-color);
+    background-color: var(--button-color);
+    top: 0;
+    left: 0;
+}
+
+.profile-name p {
+    font-size: var(--h3-font);
+    color: var(--text-color);
+}
+
+.profile-name span {
+    font-size: var(--normal-font);
+    color: var(--text-color-alt);
+}
+
+.profile-name :last-child {
+    font-size: var(--smaller-font);
+    color: var(--text-color-alt);
+}
+
+/* profile count(post, following, follower css) */
+.profile-count {
+    width: 100%;
+    margin: var(--mb-1) 0;
+    padding: var(--mb-1) 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.count-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-color);
+}
+
+.profile-follower,
+.profile-post {
+    border-right: 0.1rem solid var(--border-color);
+}
+
+.count-box p {
+    font-size: var(--h3-font);
+    cursor: pointer;
+}
+
+.count-box span {
+    cursor: pointer;
+    font-size: var(--smaller-font);
+    color: var(--text-color-alt);
+}
+
+
+/* post list in profile section css */
+.profile-content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(auto, 1fr);
+    grid-gap: 1rem;
+    position: relative;
+}
+
+.one-post {
+    position: relative;
+}
+
+.one-post i {
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 0.2rem;
+    border-radius: 50%;
+    position: absolute;
+    top: 4%;
+    right: 4%;
+    color: #f8f8f8;
+}
+
+.one-post img:not(:first-child) {
+    display: none;
+}
+
+.profile-content img {
+    aspect-ratio: 1;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    border-radius: 0.3rem;
+}
+
+/* ===== Break Point ===== */
+@media screen and (max-width: 1380px) {
+    .profile-section {
+        max-width: calc(100% - 46rem);
+    }
+
+    .profile-content {
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 1rem;
+    }
+}
+
+@media screen and (max-width: 1176px) {
+    .profile-section {
+        max-width: calc(100% - 43rem);
+    }
+}
+
+@media screen and (max-width: 1090px) {
+    .profile-section {
+        max-width: calc(100% - 38rem);
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .profile-section {
+        margin: 0 1rem 0 16rem;
+        max-width: calc(100% - 28rem);
+    }
+
+    .profile-content {
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 1rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .profile-section {
+        margin: 0 0 0 9rem;
+        max-width: 80%;
+    }
+
+    .edit-profile-form {
+        width: 25rem;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .profile-section {
+        margin: 0 0 0 0;
+        max-width: 100%;
+    }
+
+    .profile-content {
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 1rem;
+    }
+
+    .edit-profile-modal {
+        flex-direction: column;
+    }
+
+    .edit-profile-form {
+        width: 100%;
+        height: 100vh;
+        border-radius: 0 0 0 0;
+    }
+}
+
+@media screen and (max-width: 390px) {}

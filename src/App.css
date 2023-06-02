@@ -1,0 +1,202 @@
+/* ===== Font Style ===== */
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400&family=Montserrat:wght@500&family=Nunito:wght@700&family=Poppins&display=swap');
+
+
+/* ===== Variables =====*/
+:root {
+  --header-height: 3rem;
+
+  /* ===== Colors ===== */
+  --back-color: #fefefe;
+  --back-color-alt: #f8f8fe;
+  --title-color: #0e1111;
+  --text-color: #181818;
+  --text-color-alt: #4e4e4e;
+  --button-color: #4267b2;
+  --border-color: #ccc;
+  --err-color: #ff3333;
+
+  /* ===== Font & Typograpgy ===== */
+  --body-font: 'Poppins';
+  --body-font-alt: 'Montserrat';
+  --big-font: 3.5rem;
+  --h1-font: 2.25rem;
+  --h2-font: 1.5rem;
+  --h3-font: 1.25rem;
+  --normal-font: 1rem;
+  --small-font: 0.93rem;
+  --smaller-font: 0.875rem;
+  --tiny-font: 0.625rem;
+
+  /* ===== Font Weight ===== */
+  --font-normal: 400;
+  --font-medium: 500;
+  --font-semi-bold: 600;
+
+  /* ===== Margin ===== */
+  --mb-0-25: 0.25rem;
+  --mb-0-5: 0.5rem;
+  --mb-0-75: 0.75rem;
+  --mb-1: 1rem;
+  --mb-1-5: 1.5rem;
+  --mb-2: 2rem;
+  --mb-2-5: 2.5rem;
+  --mb-3: 3rem;
+
+  /* ===== z-index ===== */
+  --z-tooltip: 10;
+  --z-fixed: 100;
+  --z-modal: 1000;
+}
+
+/* ===== For Dark Theme ===== */
+[dark-theme=dark] {
+  --back-color: #171717;
+  --back-color-alt: #2b2b2b;
+  --title-color: #f8f8fe;
+  --text-color: #f8f8fe;
+  --text-color-alt: #b8b8b8;
+  --button-color: #4267b2;
+  --border-color: #ccc;
+}
+
+/* ===== Responsive Typology */
+@media screen and (max-width: 992px) {
+  :root {
+    --big-font: 2.75rem;
+    --h1-font: 1.5rem;
+    --h2-font: 1.25rem;
+    --h3-font: 1rem;
+    --normal-font: 0.938rem;
+    --small-font: 0.815rem;
+    --smaller-font: 0.75rem;
+
+  }
+}
+
+/* ===== Base ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body,
+button,
+input,
+textarea {
+  font-family: var(--body-font);
+  font-size: var(--normal-font);
+}
+
+body, .App {
+  background-color: var(--back-color-alt);
+  color: var(--text-color);
+}
+
+h1,
+h2,
+h3 {
+  color: var(--title-color);
+  font-weight: var(--font-semi-bold);
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  color: var(--text-color);
+  text-decoration: none;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  outline: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* === Layout === */
+.container {
+  max-width: 968px;
+  margin: 0 auto;
+}
+
+.grid {
+  display: grid;
+  gap: 1.5rem;
+}
+
+/* === Button === */
+.button {
+  display: inline-block;
+  background-color: var(--text-color-alt);
+  color: var(--back-color);
+  margin: 0 var(--mb-0-25);
+  padding: 1.25rem 1.4rem;
+  border-radius: 1rem;
+  font-weight: var(--font-medium);
+}
+
+.button:hover {
+  background-color: var(--title-color);
+}
+
+.button-icon {
+  margin-left: var(--mb-0-5);
+}
+
+.button-flex {
+  display: inline-flex;
+  align-items: center;
+}
+
+/* ===== Break Point ===== */
+@media screen and (min-width: 1380px) {}
+
+@media screen and (max-width: 992px) {
+  .container {
+    margin-left: var(--mb-1-5);
+    margin-right: var(--mb-1-5);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  body {
+    margin: 0 0 var(--header-height) 0;
+  }
+
+  .section {
+    padding: 2rem 0 4rem;
+  }
+
+  .section-subtitle {
+    margin-bottom: var(--mb-3);
+  }
+}
+
+@media screen and (max-width: 576px) {}
+
+@media screen and (max-width: 390px) {
+  :root {
+    --big-font: 2.25rem;
+  }
+
+  .container {
+    margin-left: var(--mb-1);
+    margin-right: var(--mb-1);
+  }
+
+  .button {
+    padding: 1rem;
+  }
+}
